@@ -1,0 +1,67 @@
+dn: ou=users,dc=example,dc=com
+objectClass: organizationalUnit
+objectClass: top
+ou: users
+
+dn: cn=user1,ou=users,dc=example,dc=com
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+objectClass: top
+cn: user1
+mail: user1@example.com
+sn: lastname
+uid: user1
+userPassword:: e1NIQX1zOXFuZTB3RXFWVWJoNEhRTVpIK0NZOHlYbWM9
+
+dn: cn=user2,ou=users,dc=example,dc=com
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+objectClass: top
+cn: user2
+mail: user2@example.com
+sn: user2
+uid: user2
+userPassword:: e1NIQX1vWWdjQnU3SmJibVFISHUvNUJ4Q28vQ09uTFE9
+
+dn: cn=adminuser1,ou=users,dc=example,dc=com
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+objectClass: top
+cn: adminuser1
+mail: adminuser1@example.com
+sn: admin
+uid: adminuser1
+userPassword:: e2NyeXB0fUV3NDFxZ3JQNS9ZRzI=
+
+dn: cn=adminuser2,ou=users,dc=example,dc=com
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+objectClass: top
+cn: adminuser2
+mail: adminuser2@example.com
+sn: adminuser2
+uid: adminuser2
+userPassword:: e1NIQX13R0Y5dG5HWWp1WWpVUkJlbDVVQWRFY0FBdjQ9
+
+dn: ou=groups,dc=example,dc=com
+objectClass: organizationalUnit
+objectClass: top
+ou: groups
+
+dn: cn=usergroup,ou=groups,dc=example,dc=com
+objectClass: groupOfNames
+objectClass: top
+cn: usergroup
+member: cn=user2,ou=users,dc=example,dc=com
+member: cn=user1,ou=users,dc=example,dc=com
+
+dn: cn=admingroup,ou=groups,dc=example,dc=com
+objectClass: groupOfNames
+objectClass: top
+cn: admingroup
+member: cn=adminuser1,ou=users,dc=example,dc=com
+member: cn=adminuser2,ou=users,dc=example,dc=com

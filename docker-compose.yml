@@ -1,0 +1,19 @@
+version: '2'
+
+services:
+  openldap:
+    image: osixia/openldap:latest
+    container_name: openldap-dev
+    ports:
+      - '2389:389'
+      - '2636:636'
+    environment:
+      - LDAP_ORGANISATION=example
+      - LDAP_DOMAIN=example.com
+      - LDAP_ADMIN_USERNAME=admin
+      - LDAP_ADMIN_PASSWORD=adminpassword
+      - LDAP_CONFIG_PASSWORD=configpassword
+      - "LDAP_BASE_DN=dc=example,dc=com"
+    volumes:
+      - './ldifs:/ldifs:ro'
+
